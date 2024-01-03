@@ -2,6 +2,9 @@ kind: APIConnectCluster
 apiVersion: apiconnect.ibm.com/v1beta1
 metadata:
   name: api-management
+  annotations:
+    apiconnect-operator/backups-not-configured: "true"
+    argocd.argoproj.io/sync-wave: "1"
 spec:
   license:
     accept: true
