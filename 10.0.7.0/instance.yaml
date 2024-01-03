@@ -2,7 +2,6 @@ kind: APIConnectCluster
 apiVersion: apiconnect.ibm.com/v1beta1
 metadata:
   name: api-management
-  namespace: integration
 spec:
   license:
     accept: true
