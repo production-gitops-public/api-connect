@@ -1,16 +1,24 @@
-kind: APIConnectCluster
 apiVersion: apiconnect.ibm.com/v1beta1
+kind: APIConnectCluster
 metadata:
-  name: api-management
+  labels:
+    app.kubernetes.io/instance: apiconnect
+    app.kubernetes.io/managed-by: ibm-apiconnect
+    app.kubernetes.io/name: apiconnect-medium
+  name: medium
+  namespace: cp4i
   annotations:
     apiconnect-operator/backups-not-configured: "true"
-    argocd.argoproj.io/sync-wave: "1"
 spec:
+  analytics:
+    mtlsValidateClient: true
   license:
     accept: true
     license: L-MMBZ-295QZQ
     metric: VIRTUAL_PROCESSOR_CORE
     use: nonproduction
-  profile: n1xc7.m48
+  portal:
+    mtlsValidateClient: true
+  profile: n1xc16.m72
   version: 10.0.7.0
   storageClassName: ocs-storagecluster-ceph-rbd
