@@ -1,0 +1,3 @@
+storage:
+  blockStorage: 'ocs-storagecluster-ceph-rbd'
+namespace: 'cp4i'

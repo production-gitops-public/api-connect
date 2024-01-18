@@ -1,0 +1,9 @@
+apiVersion: builtin
+kind: PrefixSuffixTransformer
+metadata:
+  name: customPrefixer
+prefix: "dev-"
+fieldSpecs:
+  - path: metadata/name
+    apiVersion: apiconnect.ibm.com/v1beta1
+    kind: APIConnectCluster

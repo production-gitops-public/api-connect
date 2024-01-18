@@ -6,7 +6,7 @@ metadata:
     app.kubernetes.io/managed-by: ibm-apiconnect
     app.kubernetes.io/name: apiconnect-medium
   name: medium
-  namespace: cp4i
+  namespace: {{ .Values.namespace }}
   annotations:
     apiconnect-operator/backups-not-configured: "true"
 spec:
@@ -21,4 +21,4 @@ spec:
     mtlsValidateClient: true
   profile: n1xc16.m72
   version: 10.0.7.0
-  storageClassName: ocs-storagecluster-ceph-rbd
+  storageClassName: {{ .Values.storage.blockStorage }}
